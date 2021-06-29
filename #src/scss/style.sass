@@ -27,11 +27,14 @@ a
   font-weight: 500
 
 .page-delivery
-  // padding: 0px 15px
   margin: 0px auto
   max-width: 1400px
   display: flex
   justify-content: space-between
+  @media only screen and (max-width: 1024px)
+     flex-direction: column
+  
+  
  
 .page-nav
   overflow: hidden
@@ -39,6 +42,13 @@ a
   flex-direction: column
   position: sticky
   top: 50px
+  @media only screen and (max-width: 1024px)
+    display: flex
+    position: fixed
+    z-index: 122
+    width: 100%
+    border-top: 1px solid #e7e7e7
+    border-bottom: 1px solid #e7e7e7
 
 .page-nav__link 
   padding: 13px 30px 
@@ -54,11 +64,16 @@ a
   width: 30% 
   max-width: 242px 
   // outline: 2px solid red 
-  height: auto 
+  height: auto
+  @media only screen and (max-width: 1024px)
+  width:100%
+  
  
 .grid-block2 
   width: 75% 
   padding-top: 20px 
+  @media only screen and (max-width: 1024px)
+    width: 100% 
  
 
 // секции с пунктами
