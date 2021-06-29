@@ -22,7 +22,7 @@ const onEntry = (entries) => {
 };
 
 const options ={
-    threshold: 0.9
+    threshold: 1
 }
 
 
@@ -35,23 +35,31 @@ section.forEach(section =>{
 
 // --ЗАГРУЗКА ЛЕЙЗИ ЛОАД
 
-const lazyload = target =>{
-    const options ={};
-    const io = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            console.log(entry);
-        })
-    }, options);
+// const lazyload = target =>{
+//     const options ={};
+//     const io = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             console.log(entry);
+//         })
+//     }, options);
 
-    io.observe(target);
-};
+//     io.observe(target);
+// };
 
-const images = document.querySelectorAll('.section img');
+// const images = document.querySelectorAll('.section img');
 
 
-images.forEach(image=>{
-    lazyload(image);
+// images.forEach(image=>{
+//     lazyload(image);
+// })
+
+
+// console.log('44444')
+
+const accordeons = document.querySelectorAll('.section__info-tabs-item');
+
+accordeons.forEach(el => {
+    el.addEventListener('click', () => {
+        el.classList.toggle('open');
+    });
 })
-
-
-console.log('44444')
