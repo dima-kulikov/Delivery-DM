@@ -1,0 +1,296 @@
+html
+  box-sizing: border-box
+
+*, *::before, *::after
+  box-sizing: inherit
+
+body
+  color: $text-color
+  background-color: #fff
+  font-size: 100%
+  line-height: 1.3
+  font-family: 'Cera Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif
+  font-variant-numeric: lining-nums
+  letter-spacing: 0.01px
+  overflow-x: hidden
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+.custom-scrollbar, .vs__dropdown-menu, .select2-results__options
+  scrollbar-width: thin
+  scrollbar-color: #cccccc #f3f3f3
+
+
+/* Works on Chrome/Edge/Safari */
+.custom-scrollbar, .vs__dropdown-menu, .select2-results__options
+  &::-webkit-scrollbar
+    width: 5px
+    height: 5px
+
+.custom-scrollbar, .vs__dropdown-menu, .select2-results__options
+  &::-webkit-scrollbar-track
+    background: #f3f3f3
+
+.custom-scrollbar, .vs__dropdown-menu, .select2-results__options
+  &::-webkit-scrollbar-thumb
+    background-color: #cccccc
+    border-radius: 10px
+    width: 4px
+    border-right: 0.5px solid transparent
+    border-left: 0.5px solid transparent
+    background-clip: content-box
+
+    &:hover
+      background-color: #909090
+
+a
+  color: $nd-link-color
+  text-decoration: none
+
+#_hj_feedback_container
+  display: none !important
+
+a:hover,
+a:focus
+  cursor: pointer
+//text-decoration: underline
+
+// a:visited
+  // color: $lnk
+
+a:active
+  cursor: pointer
+  color: $link--active
+
+button,
+input,
+optgroup,
+select,
+option,
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='file'],
+input[type='search'],
+input[type='submit'],
+button[type='submit'],
+button[type='button'],
+fieldset,
+figcaption,
+figure
+  font-family: 'Cera Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif
+  -webkit-appearance: none
+  font-size: 16px
+
+  &:focus
+    box-shadow: none
+
+
+input[type='button']:hover,
+input[type='submit']:hover,
+button:hover
+  cursor: pointer
+
+img
+  max-width: 100%
+
+// kill yellow in autocomplete
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+  box-shadow: 0 0 0 1000px white inset
+
+
+figure
+  margin: 0
+
+.visually-hidden
+  position: absolute
+  clip: rect(0 0 0 0)
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  overflow: hidden
+
+.overflow-hidden
+  overflow: hidden
+  height: 100%
+  width: 100%
+  touch-action: none
+  position: fixed
+
+.ellipsis-truncate
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+.block-ellipsis-truncate
+  display: block
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+
+  &--lines--3
+    -webkit-line-clamp: 3
+
+  &--lines--2
+    -webkit-line-clamp: 2
+
+.hiddenDiv
+  display: none
+  white-space: pre-wrap
+  word-wrap: break-word
+  overflow-wrap: break-word
+  padding-top: 1.2rem
+  position: absolute
+  top: 0
+
+.clearfix
+  +clearfix
+
+.bottom-menu-padding
+  padding-top: 63px
+
+  +mmin($tablet--hor)
+    padding-top: 0
+
+.alert-success.alert.fade,
+.alert-danger.alert.fade
+  padding: 10px
+  border-radius: 5px
+  color: #fff
+  padding-right: 60px
+  //position: absolute
+  position: fixed
+  top: 60px
+  right: 15px
+  display: none
+  z-index: 10
+  animation: alert-flesh .5s ease-in-out
+
+  +mmin($tablet--hor)
+    top: 100px
+
+  &.in
+    display: block
+
+  button
+    background-color: transparent
+    border: 0
+    padding: 0
+    font-size: 50px
+    position: absolute
+    top: -12px
+    right: 5px
+    color: #fff
+
+.alert-success.alert.fade
+  background-color: #4CAF50
+
+.alert-danger.alert.fade
+  background-color: $main-color
+
+.accent
+  color: $main-color
+
+body
+  counter-reset: title
+
+.open-menu
+  overflow: hidden
+  height: 100%
+  touch-action: none
+
+  +mmin($tablet--hor)
+    overflow: auto
+    touch-action: auto
+    position: static
+    height: auto
+
+.wrap
+  position: relative
+  padding: 45px 0
+
+  &__title
+    font-size: 26px
+    font-weight: 700
+    text-transform: uppercase
+    margin: 0 0 34px
+    // max-width: 300px
+    max-width: 450px
+    position: relative
+    padding-left: 170px
+
+    &::before
+      counter-increment: title
+      content: "0" counter(title) "."
+      font-size: 104px
+      line-height: 1
+      position: absolute
+      top: -35px
+      left: 0
+
+  &__desc
+    max-width: 330px
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    margin-left: 72px
+
+  &--left .wrap__text
+    float: left
+
+  &--left .wrap__img
+    float: right
+
+  &--right .wrap__text
+    float: left
+    margin-left: 28px
+
+  &--right .wrap__img
+    float: left
+
+.text-centered
+  text-align: center
+
+.with-shadow
+  border-bottom: none!important
+  box-shadow: 0 2px 4px rgba(0,0,0,.1)!important
+
+.with-border
+  border-bottom: 1px solid $nd-border-color!important
+  box-shadow: none!important
+
+.hidden-padding
+  min-height: 100vh
+
+hr
+  height: 0
+  border-bottom: 0
+  border-left: 0
+  border-right: 0
+  border-top: 2px solid rgba(51, 51, 51, 0.25)
+  margin-bottom: 20px
+
+// если забыли заполнить или поставить alt
+img[alt=""],
+img:not([alt])
+  border: 5px dashed #c00
+
+blockquote
+  margin-left: 0
+  font-style: italic
+  padding-left: 16px
+  border-left: 2px solid #e74610
+
+@keyframes alert-flesh
+  0%
+    top: 0
+
+  100%
+    top: 100px

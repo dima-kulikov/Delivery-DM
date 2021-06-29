@@ -11,14 +11,14 @@ let path={
   },
   src:{
     html: sourse_folder + "/*.html",
-    css: sourse_folder + "/scss/style.scss",
+    css: sourse_folder + "/scss/style.sass",
     js: sourse_folder + "/js/script.js",
     img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourse_folder + "/fonts/*.ttf",
   },
   watch:{
     html: sourse_folder + "/**/*.html",
-    css: sourse_folder + "/scss/**/*.scss",
+    css: sourse_folder + "/scss/**/*.sass",
     js: sourse_folder + "/js/**/*.js",
     img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
   },

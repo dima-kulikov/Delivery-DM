@@ -1,0 +1,92 @@
+=placeholder($color)
+  // Chrome/Opera/Safari
+  &::-webkit-input-placeholder
+    color: $color
+  // Firefox 19+
+  &::-moz-placeholder
+    color: $color
+  // IE 10+
+  &:-ms-input-placeholder
+    color: $color
+  // Firefox 18-
+  &:-moz-placeholder
+    color: $color
+
+=clearfix
+  &::before
+    display: table
+    height: 0
+    content: ""
+
+  &::after
+    display: table
+    height: 0
+    content: ""
+    clear: both
+
+=list-unstyled
+  list-style: none
+  padding: 0
+  margin: 0
+
+=font($font-family, $size, $weight, $line-height, $style)
+  font-family: $font-family
+  font-size: $size
+  font-weight: $weight
+  line-height: $line-height
+  font-style: $style
+
+=mmin($min-width)
+  @media only screen and (min-width: $min-width + "px")
+    @content
+
+=mmax($max-width)
+  @media only screen and (max-width: $max-width + "px")
+    @content
+
+=grid($cols, $mgn)
+  float: left
+  margin-right: $mgn
+  margin-bottom: $mgn
+  width: ((100% - (($cols - 1) * $mgn)) / $cols)
+  &:nth-child(#{$cols}n)
+    margin-right: 0
+
+=transition($transition)
+  -ms-transition: $transition
+  -moz-transition: $transition
+  -o-transition: $transition
+  -webkit-transition: $transition
+  transition: $transition
+
+=transform($transforms)
+  -ms-transform: $transforms
+  -moz-transform: $transforms
+  -o-transform: $transforms
+  -ms-transform: $transforms
+  -webkit-transform: $transforms
+  transform: $transforms
+
+// rotate
+=rotate ($deg)
+  +transform(rotate(#{$deg}deg))
+
+// scale
+=scale($scale)
+  +transform(scale($scale))
+
+// translate
+=translate ($x, $y)
+  +transform(translate($x, $y))
+
+// skew
+=skew ($x, $y)
+  +transform(skew(#{$x}deg, #{$y}deg))
+
+//transform origin
+=transform-origin ($origin)
+  -moz-transform-origin: $origin
+  -o-transform-origin: $origin
+  -ms-transform-origin: $origin
+  -webkit-transform-origin: $origin
+  transform-origin: $origin

@@ -1,0 +1,206 @@
+@import helpers/_variables
+@import helpers/_mixins
+@import helpers/_default
+@import helpers/_normalize-7.0
+
+// ul 
+//   display: flex  
+//    list-style-type: none 
+//    padding: 20px 
+//    border: 2px solid red 
+//  
+a
+  display: block
+  text-decoration: none
+  color: black
+  padding: 13px 30px
+  width: 100%
+  text-transform: none
+  text-align: left
+  margin-bottom: 4px
+  border-radius: 3px
+  font-size: 16px
+
+
+.active
+  background-color: #f3f3f3
+  font-weight: 500
+
+.page-delivery
+  // padding: 0px 15px
+  margin: 0px auto
+  max-width: 1400px
+  display: flex
+  justify-content: space-between
+ 
+.page-nav
+  overflow: hidden
+  padding: 20px 0px
+  flex-direction: column
+  position: sticky
+  top: 50px
+
+.page-nav__link 
+  padding: 13px 30px 
+  width: 100% 
+  text-transform: none 
+  text-align: left 
+  margin-bottom: 4px 
+  border-radius: 3px 
+  font-size: 16px 
+    
+
+.grid-block 
+  width: 30% 
+  max-width: 242px 
+  // outline: 2px solid red 
+  height: auto 
+ 
+.grid-block2 
+  width: 75% 
+  padding-top: 20px 
+ 
+
+// секции с пунктами
+.section 
+  display: block 
+ 
+.section-title 
+  text-transform: uppercase 
+  color: #909090 
+  font-size: 16px 
+  font-weight: 500  
+  position: relative 
+ 
+.section__info-tabs-item 
+  margin-top: 20px  
+  border: 1px solid #e7e7e7 
+  border-radius: 3px 
+  position: relative 
+  cursor: pointer 
+ 
+.section__open-btn 
+  position: absolute 
+  width: 20px 
+  height: 20px 
+  right: 30px 
+  top: 26px 
+  padding: 0 
+  margin: 0 
+  background-color: transparent 
+  border: 0  
+ 
+.section__open-btn::before 
+  content: "" 
+  position: absolute 
+  background-color: #333 
+  cursor: pointer 
+  left: 0 
+  top: 9px 
+  height: 2px 
+  width: 20px 
+
+ 
+.section__open-btn::after 
+  content: "" 
+  position: absolute 
+  background-color: #333 
+  cursor: pointer 
+  width: 2px 
+  height: 20px 
+  left: 9px 
+  top: 0 
+ 
+.info-tabs-item__title 
+  flex-wrap: nowrap 
+  padding-left: 40px 
+  //  height: 75px 
+  cursor: pointer 
+  display: flex 
+  align-items: center 
+  padding: 25px 0 25px 15px 
+ 
+.info-tabs-item__title-name 
+  // margin-bottom: 0 
+  font-size: 18px 
+  font-weight: 500 
+  text-transform: uppercase 
+  margin: 0px 15px 
+  letter-spacing: .04em 
+  line-height: 27px 
+ 
+.info-tabs-item__title-price-free 
+  font-size: 14px 
+  color: #359d3f 
+  font-weight: 500 
+  margin-left: 5px 
+  line-height: 21px  
+
+.info-tabs-item 
+  max-height: 0 
+  transition: .3s 
+  overflow: hidden 
+  padding-left: 40px
+  max-width: 780px
+ 
+.open .info-tabs-item 
+  max-height: 2000px
+  padding: 5px 5px 50px 40px 
+ 
+// -------ВНУТРЯНКА БЛОКА
+.info-tabs-item__bigger-fz 
+  font-size: 18px 
+  line-height: 24px 
+ 
+.info-tabs-item__offset-top-text 
+  margin-top: 10px 
+
+ 
+.section h3  
+  margin-top: 30px 
+  color: #444 
+  font-weight: 500 
+  font-size: 16px 
+  
+.section ul
+  list-style-type: none
+  padding: 0px
+
+.section li
+  margin-bottom: 15px
+
+.section li::before
+  content: ""
+  // position: absolute
+  display: inline-block
+  width: 6px
+  height: 6px
+  border-radius: 50%
+  background-color: #e7e7e7
+  // left: -25px
+  // top: 7px
+  margin-right: 27px
+  margin-bottom: 3px
+
+.link--pseudo
+  display: inline
+  text-decoration: none
+  padding: 0
+  border-top: 0
+  border-right: 0
+  border-bottom: .11em dotted #3e77aa
+  border-left: 0
+  color: #3e77aa
+
+.info-tabs-item__subtitle 
+  font-size: 14px
+  color: #909090
+  margin-top: 5px
+  display: inline-block
+  line-height: 21px
+  max-width: 650px
+
+.left-space
+  padding-left: 32px
+  margin-bottom: 0px
+  
