@@ -1107,6 +1107,21 @@ a {
             flex-direction: column;
   }
 
+  .page-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 122;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .grid-block {
+    width: 100%;
+  }
+
   .grid-block2 {
     width: 100%;
   }
