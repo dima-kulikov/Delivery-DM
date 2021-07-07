@@ -868,6 +868,7 @@ a {
   margin-bottom: 4px;
   border-radius: 3px;
   font-size: 16px;
+  background-color: #fff;
 }
 
 .active {
@@ -876,7 +877,7 @@ a {
 }
 
 .page-delivery {
-  margin: 0px auto;
+  margin: 50px auto 0;
   max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,7 +889,6 @@ a {
 
 .page-nav {
   overflow: hidden;
-  padding: 20px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -909,14 +909,13 @@ a {
 }
 
 .grid-block {
-  width: 30%;
+  width: 20%;
   max-width: 242px;
   height: auto;
 }
 
 .grid-block2 {
   width: 75%;
-  padding-top: 20px;
 }
 
 .section {
@@ -1111,18 +1110,45 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: fixed;
     z-index: 122;
     width: 100%;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0px 0px;
+  }
+
+  .page-nav__link {
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin: 0px;
+    width: 33.333%;
+    padding: 23px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e7e7e7;
+    border-radius: 0px;
   }
 
   .grid-block {
     width: 100%;
+    padding: 0;
+    max-width: 100%;
+    top: 0px;
+    z-index: 222;
+    height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .grid-block2 {
     width: 100%;
+  }
+
+  .section__info-tabs-item {
+    border-left: 0px;
+    border-right: 0px;
   }
 }
