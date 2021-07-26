@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header style="height: 250px; background-color: dimgray;">
+  <header style="height: 200px; background-color: dimgray;">
 
   </header>
   <h1 style="max-width:1400px;margin:0 auto;padding:0 15px">Доставка, оплата и возврат</h1>
@@ -18,7 +18,7 @@
 
     <div class="grid-block">
 
-      <nav style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px" class="page-nav">
+      <nav class="page-nav">
         <a href="#section_1" class="page-nav__link">Доставка</a>
         <a href="#section_2" class="page-nav__link">Оплата</a>
         <a href="#section_3" class="page-nav__link">Возврат</a>
@@ -30,7 +30,7 @@
         <h2 class="section-title">Доставка</h2>
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title"><svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="delivery-padding info-tabs-item__title"><svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.5692 10.7065V10.6374C13.6382 10.2231 13.6382 9.80876 13.6382 9.46348C13.6382 8.0133 13.1548 5.73446 11.7047 4.31881C10.0473 2.73053 8.21734 2.14355 6.14566 2.14355H5.04077L5.83491 2.9377L13.5692 10.7065Z" fill="#FF2F00"></path>
               <path d="M9.73688 11.6029C8.90821 12.8114 7.31992 13.6056 5.86975 13.6056C5.07561 13.6056 4.35052 13.6056 3.69449 13.6056V5.56056L0 1.83154V16.9548H3.03846H3.72902H6.00786C8.32123 16.9548 10.0476 16.4369 11.774 14.814C11.9812 14.6069 12.1538 14.3997 12.3265 14.158L9.73688 11.6029Z" fill="#FF2F00"></path>
               <path d="M26.0001 0L21.1316 4.86844L16.2632 0V9.56424H18.8873V6.04239L21.1662 8.32123L23.4105 6.07692V9.56424H26.0001V0Z" fill="#141419"></path>
@@ -38,6 +38,7 @@
             <h2 class="info-tabs-item__title-name">Самовывоз</h2>
             <!-- <div class="info-tabs-item__break"></div> -->
             <span class="info-tabs-item__title-price-free info-tabs-item__title-price-free--no-margin">Бесплатно</span>
+            
           </div>
           <div class="info-tabs-item">
             <p class="info-tabs-item__bigger-fz">Оформите заказ на сайте — заберите в фирменном магазине со скидкой 5% на неакционные товары! </p>
@@ -57,16 +58,17 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title"><svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="delivery-padding info-tabs-item__title"><svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.5692 10.7065V10.6374C13.6382 10.2231 13.6382 9.80876 13.6382 9.46348C13.6382 8.0133 13.1548 5.73446 11.7047 4.31881C10.0473 2.73053 8.21734 2.14355 6.14566 2.14355H5.04077L5.83491 2.9377L13.5692 10.7065Z" fill="#FF2F00"></path>
               <path d="M9.73688 11.6029C8.90821 12.8114 7.31992 13.6056 5.86975 13.6056C5.07561 13.6056 4.35052 13.6056 3.69449 13.6056V5.56056L0 1.83154V16.9548H3.03846H3.72902H6.00786C8.32123 16.9548 10.0476 16.4369 11.774 14.814C11.9812 14.6069 12.1538 14.3997 12.3265 14.158L9.73688 11.6029Z" fill="#FF2F00"></path>
               <path d="M26.0001 0L21.1316 4.86844L16.2632 0V9.56424H18.8873V6.04239L21.1662 8.32123L23.4105 6.07692V9.56424H26.0001V0Z" fill="#141419"></path>
             </svg>
             <h2 class="info-tabs-item__title-name">КУРЬЕР DNIPRO-M</h2>
-            <!-- <div class="info-tabs-item__break"></div> -->
-            <span class="info-tabs-item__title-price-free info-tabs-item__title-price-free--no-margin">Бесплатно</span>
+                <div class="pp">
+                 <span class="info-tabs-item__title-price-free info-tabs-item__title-price-free--no-margin">Бесплатно</span>
+                <b class="fz-small"><span class="info-tabs-item__tire">—</span>от 3 часов*</b>
+                </div>
           </div>
-
 
 
           <div class="info-tabs-item">
@@ -98,7 +100,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="delivery-padding import-class info-tabs-item__title"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16.827 5.92177C16.8905 5.90249 16.9741 5.94105 17.0577 6.04707C17.0577 6.04707 17.0577 6.04707 20.8345 9.60054C21.0551 9.81259 21.0551 10.1339 20.8345 10.2913C20.8345 10.2913 20.8345 10.2913 17.0577 13.8994C16.9741 14.0054 16.8905 14.0311 16.827 13.999C16.7635 13.9669 16.7234 13.8737 16.7234 13.7388V6.1531C16.7234 6.02137 16.7635 5.94105 16.827 5.92177Z" fill="#ED1C24"></path>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3664 0H10.6338L10.8911 0.102813C10.8911 0.102813 10.8911 0.102813 14.7783 3.81693C14.9454 4.02898 14.8886 4.18963 14.6112 4.18963C14.6112 4.18963 14.6112 4.18963 13.0001 4.18963C12.7227 4.18963 12.5021 4.40168 12.5021 4.66835C12.5021 4.66835 12.5021 4.66835 12.5021 7.42502C12.5021 7.69169 12.2782 7.90374 11.944 7.90374C11.944 7.90374 11.944 7.90374 9.11299 7.90374C8.83557 7.90374 8.61164 7.69169 8.61164 7.42502C8.61164 7.42502 8.61164 7.42502 8.61164 4.66835C8.61164 4.40168 8.39104 4.18963 8.11028 4.18963H6.38897C6.11156 4.18963 6.05474 4.02898 6.22185 3.81693C6.22185 3.81693 6.22185 3.81693 10.1124 0.102813L10.3664 0Z" fill="#ED1C24"></path>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27654 5.84204C4.34673 5.87417 4.39018 5.96734 4.39018 6.10229V13.8454C4.39018 13.9803 4.34673 14.0606 4.27654 14.0864C4.2097 14.1121 4.11277 14.0864 3.99913 14.006C3.99913 14.006 3.99913 14.006 0.165447 10.2919C-0.0551489 10.1345 -0.0551489 9.81319 0.165447 9.60114C0.165447 9.60114 0.165447 9.60114 3.99913 5.94164C4.11277 5.83562 4.2097 5.80991 4.27654 5.84204Z" fill="#ED1C24"></path>
@@ -106,7 +108,7 @@
             </svg>
             <h2 class="info-tabs-item__title-name">Новая почта</h2>
             <!-- <div class="info-tabs-item__break"></div> -->
-            <span class="info-tabs-item__title-price-free info-tabs-item__title-price-free--no-margin">Бесплатно</span>
+            <div class="info-tabs-item__title-price-block"><p><span class="info-tabs-item__subtitle">До отделения:</span><span class="info-tabs-item__title-price-free">Бесплатно</span><span class="info-tabs-item__tire">—</span><b class="fz-small">1-3 дня</b></p><p><span class="info-tabs-item__subtitle">Курьером: </span><b class="fz-small"> 70 грн*<span class="info-tabs-item__tire">—</span>2-4 дня</b></p></div>
           </div>
           <div class="info-tabs-item">
             <div class="info-tabs-item__content info-tabs-item__content--opened">
@@ -133,7 +135,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title"><svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class=" delivery-padding info-tabs-item__title"><svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.2868 13.6744L8.0709 11.8966C5.6236 11.3464 4.09404 9.01831 4.66216 6.64794C5.23029 4.27757 7.63389 2.79609 10.0812 3.34635C12.5285 3.89662 14.0581 6.22466 13.4899 8.59503C13.2277 9.78021 12.4848 10.7538 11.4796 11.3464C11.4359 11.3464 11.4359 11.3887 11.4359 11.431C11.4359 11.4733 11.4796 11.5157 11.5233 11.558L15.1943 12.3622C15.2817 12.3622 15.3691 12.3622 15.4128 12.2776C16.4179 11.0077 17.0298 9.39926 17.0298 7.66381C17.0298 3.55799 13.7084 0.214077 9.55677 0.00243721C9.51306 0.00243721 9.29455 0.00243721 9.20715 0.00243721C7.37168 -0.0398908 5.4925 0.468046 3.87553 1.6109C-0.232437 4.40455 -1.23758 9.86487 1.64674 13.8437L8.94494 23.9178C8.98864 23.9601 9.03234 24.0024 9.07605 24.0024C9.11975 24.0024 9.16345 23.9601 9.20715 23.9178L16.3742 14.013C16.3742 13.9707 16.4179 13.9707 16.4179 13.9284C16.4179 13.7591 16.3305 13.7167 16.2868 13.6744Z" fill="#FFC629"></path>
             </svg>
             <h2 class="info-tabs-item__title-name">Укрпошта</h2>
@@ -164,7 +166,7 @@
         <h2 class="section-title">Оплата</h2>
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">Наличными</h2>
 
@@ -189,7 +191,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">КАРТОЙ VISA/MASTERCARD</h2>
           </div>
@@ -218,7 +220,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">ОПЛАТА ЧАСТЯМИ</h2>
           </div>
@@ -245,7 +247,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">БЕЗНАЛИЧНЫЙ РАСЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</h2>
           </div>
@@ -274,7 +276,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
             <h2 class="info-tabs-item__title-name">БОНУСАМИ</h2>
           </div>
           <div class="info-tabs-item">
@@ -308,7 +310,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">БЕЗНАЛИЧНЫЙ РАСЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</h2>
           </div>
@@ -343,7 +345,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">КАК ВЕРНУТЬ ТОВАР В ФИРМЕННОМ МАГАЗИНЕ</h2>
           </div>
@@ -374,7 +376,7 @@
 
         <div class="section__info-tabs-item">
           <button class="section__open-btn"></button>
-          <div class="info-tabs-item__title">
+          <div class="payment-return-padding info-tabs-item__title">
 
             <h2 class="info-tabs-item__title-name">БЕЗНАЛИЧНЫЙ РАСЧЕТ ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ</h2>
           </div>
