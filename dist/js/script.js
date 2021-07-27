@@ -16,6 +16,7 @@ const onEntry = (entries) => {
 
             const nextActiveLink = nav.querySelector(`a[href="#${sectionId}"]`);
             nextActiveLink.classList.add('active');
+
         }
 
     });
@@ -57,9 +58,17 @@ section.forEach(section =>{
 // console.log('44444')
 
 const accordeons = document.querySelectorAll('.section__info-tabs-item');
+const replacementIcon = document.querySelectorAll('.section__open-btn');
+
 
 accordeons.forEach(el => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (evt) => {
         el.classList.toggle('open');
+        evt.currentTarget.querySelector('.section__open-btn').classList.toggle('section__open-btn__del-after');
     });
 })
+// replacementIcon.forEach(el => {
+//     el.addEventListener('click', () => {
+//         el.classList.toggle('section__open-btn__del-after');
+//     });
+// })
