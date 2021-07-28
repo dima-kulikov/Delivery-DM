@@ -223,9 +223,11 @@ a
   font-size: 18px 
   line-height: 24px 
  
-.info-tabs-item__offset-top-text 
-  margin-top: 10px 
+// .top-text 
+//   margin: 10px 0px 4px 
 
+.top-p-of-text
+  margin-top: 30px  
  
 .section h3  
   margin-top: 30px 
@@ -235,23 +237,30 @@ a
   
 .section ul
   list-style-type: none
-  padding: 0px
+  padding-left: 25px
 
 .section li
   margin-bottom: 15px
 
-.section li::before
+.point-style-lists li
+  position: relative
+
+
+.point-style-lists li::before
   content: ""
-  // position: absolute
+  position: absolute
   display: inline-block
   width: 6px
   height: 6px
   border-radius: 50%
   background-color: #e7e7e7
-  // left: -25px
-  // top: 7px
-  margin-right: 27px
+  left: -25px
+  top: 7px
+  margin-right: 20px
   margin-bottom: 3px
+
+.numbers-list
+  padding-left: 15px
 
 .link--pseudo
   display: inline
@@ -266,13 +275,13 @@ a
 .info-tabs-item__subtitle 
   font-size: 14px
   color: #909090
-  margin-top: 0px
+  margin-top: 5px
   display: inline-block
   line-height: 21px
   max-width: 650px
 
 .left-space
-  padding-left: 32px
+  padding-left: 25px
   margin-bottom: 0px
   
 // 26.07.2021  
@@ -294,9 +303,14 @@ a
 .info-tabs-item__title-price-block p  
   margin: 2px 0px
 
-
-
 .adaptive-block
   @media only screen and (max-width: 1024px)
     display: block
-    margin-top: 15px  
+    margin-top: 15px
+
+.list-options
+  margin: 15px 0px 30px
+
+.subtitle-color
+  color: #909090
+  margin-bottom: -12px
