@@ -857,7 +857,7 @@ template {
   display: none;
 }
 
-a {
+.page-nav__link {
   display: block;
   text-decoration: none;
   color: black;
