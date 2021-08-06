@@ -5,9 +5,9 @@ const onEntry = (entries) => {
         // console.log(entry);
 
         if(entry.isIntersecting){
-            console.log(entry.target);
+            // console.log(entry.target);
             const sectionId = entry.target.getAttribute('id');
-            console.log(sectionId);
+            // console.log(sectionId);
 
             const currentActiveLink = nav.querySelector('.active');
             if(currentActiveLink){
@@ -34,41 +34,27 @@ section.forEach(section =>{
     observer.observe(section);
 });
 
-// --ЗАГРУЗКА ЛЕЙЗИ ЛОАД
 
-// const lazyload = target =>{
-//     const options ={};
-//     const io = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             console.log(entry);
-//         })
-//     }, options);
-
-//     io.observe(target);
-// };
-
-// const images = document.querySelectorAll('.section img');
-
-
-// images.forEach(image=>{
-//     lazyload(image);
-// })
-
-
-// console.log('44444')
-
-const accordeons = document.querySelectorAll('.section__info-tabs-item');
+const accordeons = document.querySelectorAll('.info-tabs-item__title');
 const replacementIcon = document.querySelectorAll('.section__open-btn');
 
 
+function headerClick () {
+    // el.classList.toggle('open');
+    console.log(this);
+    console.log(this.parentElement);
+    this.parentElement.classList.toggle('open');
+    this.parentElement.querySelector('.section__open-btn').classList.toggle('section__open-btn__del-after');
+    this.preventDefault()
+};
+
 accordeons.forEach(el => {
-    el.addEventListener('click', (evt) => {
-        el.classList.toggle('open');
-        evt.currentTarget.querySelector('.section__open-btn').classList.toggle('section__open-btn__del-after');
-    });
+    el.addEventListener('click', headerClick);
 })
-// replacementIcon.forEach(el => {
-//     el.addEventListener('click', () => {
-//         el.classList.toggle('section__open-btn__del-after');
-//     });
-// })
+    
+
+console.log(document.querySelector('.delivery-padding').parentElement);
+
+// Добавление к части ссылки страница
+
+window.location.hash="js";
