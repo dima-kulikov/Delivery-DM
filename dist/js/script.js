@@ -1,38 +1,59 @@
-const nav = document.querySelector('.page-nav');
+//ПЕРВЫЙ СПОСОБ НАВЕСИТЬ КЛАСС ПРИ ПРОКРУТКЕ
+// const nav = document.querySelector('.page-nav');
 
-const onEntry = (entries) => {
-    entries.forEach(entry=>{
-        // console.log(entry);
+// const onEntry = (entries) => {
+//     entries.forEach(entry=>{
+//         // console.log(entry);
 
-        if(entry.isIntersecting){
-            // console.log(entry.target);
-            const sectionId = entry.target.getAttribute('id');
-            // console.log(sectionId);
+//         if(entry.isIntersecting){
+//             // console.log(entry.target);
+//             const sectionId = entry.target.getAttribute('id');
+//             // console.log(sectionId);
 
-            const currentActiveLink = nav.querySelector('.active');
-            if(currentActiveLink){
-                currentActiveLink.classList.remove('active');
-            }
+//             const currentActiveLink = nav.querySelector('.active');
+//             if(currentActiveLink){
+//                 currentActiveLink.classList.remove('active');
+//             }
 
-            const nextActiveLink = nav.querySelector(`a[href="#${sectionId}"]`);
-            nextActiveLink.classList.add('active');
+//             const nextActiveLink = nav.querySelector(`a[href="#${sectionId}"]`);
+//             nextActiveLink.classList.add('active');
 
-        }
+//         }
 
-    });
-};
+//     });
+// };
 
-const options ={
-    threshold: 1
-}
+// const options ={
+//     threshold: 1
+// }
 
 
-const observer = new IntersectionObserver(onEntry, options);
-const section = document.querySelectorAll('.section');
+//ВТОРОЙ СПОСОБ НАВЕСИТЬ КЛАСС ПРИ ПРОКРУТКЕ
 
-section.forEach(section =>{
-    observer.observe(section);
+window.addEventListener('scroll', () => {
+	let scrollDistance = window.scrollY;
+
+	// if (window.innerWidth > 768) {
+		document.querySelectorAll('.section').forEach((el, i) => {
+			if (el.offsetTop - document.querySelector('.page-nav').clientHeight <= scrollDistance) {
+				document.querySelectorAll('.page-nav a').forEach((el) => {
+					if (el.classList.contains('active')) {
+						el.classList.remove('active');
+					}
+				});
+
+				document.querySelectorAll('.page-nav li')[i].querySelector('a').classList.add('active');
+			}
+		});
+	// }
 });
+//-----------------------
+// const observer = new IntersectionObserver(onEntry, options);
+// const section = document.querySelectorAll('.section');
+
+// section.forEach(section =>{
+//     observer.observe(section);
+// });
 
 
 const accordeons = document.querySelectorAll('.info-tabs-item__title');

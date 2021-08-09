@@ -898,6 +898,13 @@ template {
   top: 50px;
 }
 
+.page-nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
 .page-nav__link {
   padding: 13px 30px;
   width: 100%;
@@ -1179,11 +1186,20 @@ template {
     padding: 0px 0px;
   }
 
+  .page-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .page-nav li {
+    width: inherit;
+  }
+
   .page-nav__link {
     border: 1px solid transparent;
     cursor: pointer;
     margin: 0px;
-    width: 33.333%;
     padding: 23px 0;
     text-transform: uppercase;
     text-align: center;

@@ -53,6 +53,21 @@
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px
 
 
+//--
+.page-nav ul
+  list-style-type: none
+  margin: 0px
+  padding: 0px
+  width: 100%
+  @media only screen and (max-width: 1024px)
+    display: flex
+
+.page-nav li
+  @media only screen and (max-width: 1024px)
+    width: inherit
+  
+//--
+
 .page-nav__link 
   padding: 13px 30px 
   width: 100% 
@@ -66,7 +81,7 @@
     cursor: pointer
     // color: #333
     margin: 0px
-    width: 33.333%
+    // width: 33.333%
     padding: 23px 0
     text-transform: uppercase
     text-align: center
