@@ -857,7 +857,7 @@ template {
   display: none;
 }
 
-.page-nav__link {
+.dl-page-nav__link {
   display: block;
   text-decoration: none;
   color: black;
@@ -871,13 +871,14 @@ template {
   background-color: #fff;
 }
 
-.active {
+.dl-active {
   background-color: #f3f3f3;
   font-weight: 500;
 }
 
-.page-delivery {
+.dl-page-delivery {
   margin: 50px auto 0;
+  padding: 0px 15px;
   max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,7 +888,7 @@ template {
           justify-content: space-between;
 }
 
-.page-nav {
+.dl-page-nav {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -898,14 +899,14 @@ template {
   top: 50px;
 }
 
-.page-nav ul {
+.dl-page-nav ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
   width: 100%;
 }
 
-.page-nav__link {
+.dl-page-nav__link {
   padding: 13px 30px;
   width: 100%;
   text-transform: none;
@@ -915,21 +916,29 @@ template {
   font-size: 16px;
 }
 
-.grid-block {
+.dl-grid-block {
   width: 20%;
   max-width: 242px;
   height: auto;
+  -webkit-transition: top .3s ease-in-out;
+  -o-transition: top .3s ease-in-out;
+  transition: top .3s ease-in-out;
 }
 
-.grid-block2 {
+.dl-grid-block2 {
   width: 75%;
 }
 
-.section {
+.dl-section {
   display: block;
+  padding-top: 37px;
 }
 
-.section-title {
+.dl-section:first-child {
+  padding-top: 0px;
+}
+
+.dl-section-title {
   text-transform: uppercase;
   color: #909090;
   font-size: 16px;
@@ -937,15 +946,14 @@ template {
   position: relative;
 }
 
-.section__info-tabs-item {
+.dl-section__info-tabs-item {
   margin-top: 20px;
   border: 1px solid #e7e7e7;
   border-radius: 3px;
   position: relative;
-  cursor: pointer;
 }
 
-.section__open-btn {
+.dl-section__open-btn {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -957,7 +965,7 @@ template {
   border: 0;
 }
 
-.section__open-btn::before {
+.dl-section__open-btn::before {
   content: "";
   position: absolute;
   background-color: #333;
@@ -968,7 +976,7 @@ template {
   width: 20px;
 }
 
-.section__open-btn::after {
+.dl-section__open-btn::after {
   content: "";
   position: absolute;
   background-color: #333;
@@ -979,13 +987,13 @@ template {
   top: 0px;
 }
 
-.section__open-btn__del-after::after {
+.dl-section__open-btn__del-after::after {
   content: "";
   width: 0px;
   height: 0px;
 }
 
-.info-tabs-item__title {
+.dl-info-tabs-item__title {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   cursor: pointer;
@@ -998,29 +1006,29 @@ template {
   padding: 25px 0 25px 40px;
 }
 
-.delivery-padding {
+.dl-delivery-padding {
   padding: 25px 0 25px 40px;
 }
 
-.payment-return-padding {
+.dl-payment-return-padding {
   padding: 25px 0 25px 24px;
 }
 
-.import-class {
+.dl-import-class {
   padding-top: 15px;
   padding-bottom: 14px;
 }
 
-.info-tabs-item__title-name {
+.dl-info-tabs-item__title-name {
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 0px 15px;
+  margin: 0px 25px 0px 15px;
   letter-spacing: .04em;
   line-height: 27px;
 }
 
-.info-tabs-item__title-price-free {
+.dl-info-tabs-item__title-price-free {
   font-size: 14px;
   color: #359d3f;
   font-weight: 500;
@@ -1028,7 +1036,7 @@ template {
   line-height: 21px;
 }
 
-.info-tabs-item {
+.dl-info-tabs-item {
   max-height: 0;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -1038,41 +1046,41 @@ template {
   max-width: 780px;
 }
 
-.open .info-tabs-item {
+.dl-open .dl-info-tabs-item {
   max-height: 2000px;
   padding: 5px 5px 50px 40px;
 }
 
-.info-tabs-item__bigger-fz {
+.dl-info-tabs-item__bigger-fz {
   font-size: 18px;
   line-height: 24px;
 }
 
-.top-p-of-text {
+.dl-top-p-of-text {
   margin-top: 30px;
 }
 
-.section h3 {
+.dl-section h3 {
   margin-top: 30px;
   color: #444;
   font-weight: 500;
   font-size: 16px;
 }
 
-.section ul {
+.dl-section ul {
   list-style-type: none;
   padding-left: 25px;
 }
 
-.section li {
+.dl-section li {
   margin-bottom: 15px;
 }
 
-.point-style-lists li {
+.dl-point-style-lists li {
   position: relative;
 }
 
-.point-style-lists li::before {
+.dl-point-style-lists li::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -1086,11 +1094,11 @@ template {
   margin-bottom: 3px;
 }
 
-.numbers-list {
+.dl-numbers-list {
   padding-left: 15px;
 }
 
-.link--pseudo {
+.dl-link--pseudo {
   display: inline;
   text-decoration: none;
   padding: 0;
@@ -1101,49 +1109,63 @@ template {
   color: #3e77aa;
 }
 
-.info-tabs-item__subtitle {
+.dl-info-tabs-item__subtitle {
   font-size: 14px;
   color: #909090;
-  margin-top: 5px;
+  margin: 5px 0px 0px;
   display: inline-block;
   line-height: 21px;
   max-width: 650px;
 }
 
-.left-space {
-  padding-left: 25px;
+.dl-left-space {
   margin-bottom: 0px;
+  display: block;
 }
 
-.fz-small {
+.dl-fz-small {
   font-size: 14px;
   font-weight: 500;
 }
 
-.info-tabs-item__tire {
+.dl-info-tabs-item__tire {
   margin: 0 10px;
   color: #909090;
 }
 
-.info-tabs-item__title-price-block {
+.dl-info-tabs-item__title-price-block {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
   width: auto;
-  min-width: 400px;
 }
 
-.info-tabs-item__title-price-block p {
+.dl-info-tabs-item__title-price-block p {
   margin: 2px 0px;
 }
 
-.list-options {
+.dl-list-options {
   margin: 15px 0px 30px;
 }
 
-.subtitle-color {
+.dl-subtitle-color {
   color: #909090;
   margin-bottom: -12px;
+}
+
+.dl-anchor {
+  display: block;
+  position: relative;
+  top: -20px;
+  visibility: hidden;
+}
+
+.indent-up-zero {
+  margin-top: 0px;
+}
+
+.indent-down-zero {
+  margin-bottom: 0px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1166,18 +1188,19 @@ template {
 }
 
 @media only screen and (max-width: 1024px) {
-  .page-delivery {
+  .dl-page-delivery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0px;
   }
 
-  .page-nav {
+  .dl-page-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 122;
+    z-index: 2;
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1186,17 +1209,17 @@ template {
     padding: 0px 0px;
   }
 
-  .page-nav ul {
+  .dl-page-nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .page-nav li {
+  .dl-page-nav li {
     width: inherit;
   }
 
-  .page-nav__link {
+  .dl-page-nav__link {
     border: 1px solid transparent;
     cursor: pointer;
     margin: 0px;
@@ -1208,67 +1231,78 @@ template {
     border-radius: 0px;
   }
 
-  .grid-block {
+  .dl-grid-block {
     width: 100%;
     padding: 0;
     max-width: 100%;
     top: 0px;
-    z-index: 222;
+    z-index: 2;
     height: 100%;
     position: -webkit-sticky;
     position: sticky;
   }
 
-  .grid-block2 {
+  .dl-grid-block2 {
     width: 100%;
   }
 
-  .section-title {
+  .dl-section:first-child {
+    padding-top: 37px;
+  }
+
+  .dl-section-title {
     margin-left: 20px;
   }
 
-  .section__info-tabs-item {
+  .dl-section__info-tabs-item {
     border-left: none;
     border-right: none;
     border-bottom: none;
     margin-top: 0px;
   }
 
-  .section__info-tabs-item:nth-last-child(1) {
+  .dl-section__info-tabs-item:nth-last-child(1) {
     border-bottom: 1px solid #e7e7e7;
   }
 
-  .info-tabs-item__title {
+  .dl-info-tabs-item__title {
     display: block;
     padding: 25px 0 25px 15px;
   }
 
-  .info-tabs-item__title svg {
+  .dl-info-tabs-item__title svg {
     display: inline-block;
   }
 
-  .info-tabs-item__title-name {
+  .dl-info-tabs-item__title-name {
     display: inline-block;
+    margin: 0px;
+    width: 80%;
   }
 
-  .info-tabs-item__title-price-free {
+  .dl-info-tabs-item__title-price-free {
     margin-left: 0px;
   }
 
-  .info-tabs-item {
+  .dl-info-tabs-item {
     max-width: 100%;
   }
 
-  .open .info-tabs-item {
+  .dl-open .dl-info-tabs-item {
     padding: 5px 15px 30px;
   }
 
-  .info-tabs-item__title-price-block {
+  .dl-info-tabs-item__title-price-block {
+    margin-top: 15px;
+    display: contents;
+  }
+
+  .dl-adaptive-block {
+    display: block;
     margin-top: 15px;
   }
 
-  .adaptive-block {
-    display: block;
-    margin-top: 15px;
+  .dl-anchor {
+    top: -150px;
   }
 }
